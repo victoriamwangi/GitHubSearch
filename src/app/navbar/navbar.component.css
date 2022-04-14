@@ -1,0 +1,8 @@
+.navbar {
+    background-color: rgb(94, 94, 185) !important;
+    justify-content: center;
+}
+
+.container-fluid {
+    margin-left: 40vw;
+}
