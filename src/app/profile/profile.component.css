@@ -4,3 +4,18 @@
     width: 90%;
     border: solid 1px;
 }
+
+.col-infor {
+    margin-top: 3vw;
+}
+
+.infor {
+    height: 6vw;
+    margin-bottom: 2vw;
+    padding-left: 1.2vw;
+}
+
+.title {
+    color: rgb(28, 28, 236);
+    font-weight: bold;
+}

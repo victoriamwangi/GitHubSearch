@@ -5,5 +5,23 @@
             <p>{{ user.login }}</p>
         </div>
     </div>
-    <div class="col-lg-8"></div>
+    <div class="col-lg-4 col-infor">
+        <div class="infor shadow">
+            <p class="title">Names</p>
+            <p>{{ user.name }}</p>
+        </div>
+        <div class="infor shadow">
+            <p class="title">Profile Url</p>
+            <a href="">{{ user.url }}</a>
+        </div>
+        <div class="infor shadow">
+            <p class="title">Following</p>
+            <p>{{ user.following }}</p>
+        </div>
+        <div class="infor shadow">
+            <p class="title">Followers</p>
+            <p>{{ user.followers }}</p>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
 </div>

@@ -17,15 +17,21 @@ user: User;
 
    userRequest(){
      interface ApiResponse{
-       name: string;
+       login: string;
        avatar_url: string;
        url: string;
+       name: string;
+       following: number;
+       followers: number;
      }
      let promise = new Promise((resolve, reject)=>{
        this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response =>{
          this.user.avatar_url = response!.avatar_url;
-         this.user.login= response!.name;
+         this.user.login= response!.login;
          this.user.url = response!.url;
+         this.user.name = response!.name;
+         this.user.followers = response!.followers;
+         this.user.following = response!.following;
          resolve("")
 
        },
