@@ -1,10 +1,11 @@
 <div class="container" *ngFor="let repInfor of repositoriesInfor">
-    <div class="repo shadow">
+    <div class="repo rounded shadow">
         <a class="name" href="{{ repInfor.html_url }}" target="_blank">{{
       repInfor.html_url
     }}</a>
+        <p class="description">{{ repInfor.description }}</p>
+        <p class="description">{{ repInfor.created_at | date: "mediumDate" }}</p>
 
-        <p>{{ repInfor.description }}</p>
         <p>
             <a name="" id="" class="btn btn-primary" href="{{ repInfor.name }}" role="button">View Repository</a
       >

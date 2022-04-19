@@ -4,7 +4,8 @@ export class User {
   following!: number;
 
 
-  constructor(public login: string, public avatar_url: string, public url: string){
+
+  constructor(public login: string, public avatar_url: string, public url: string, public created_at: string){
 
   }
 }

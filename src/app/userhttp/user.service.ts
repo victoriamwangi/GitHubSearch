@@ -16,8 +16,8 @@ repositories:any = [];
 newUsersInfor:any = [];
 
   constructor(private http :HttpClient) {
-    this.user = new User ("","","");
-    this.repo = new Repository("", "", "","");
+    this.user = new User ("","","", "");
+    this.repo = new Repository("", "", "","", "");
    }
 
    userRequest(){
@@ -29,6 +29,7 @@ newUsersInfor:any = [];
        following: number;
        followers: number;
        repos_url: Repository[];
+       created_at: string;
 
      }
      let promise = new Promise((resolve, reject)=>{
@@ -39,6 +40,7 @@ newUsersInfor:any = [];
          this.user.name = response!.name;
          this.user.followers = response!.followers;
          this.user.following = response!.following;
+         this.user.created_at = response!.created_at;
 
          resolve("")
        },
@@ -51,7 +53,7 @@ newUsersInfor:any = [];
        })
        this.http.get<any>(environment.reposUrl).toPromise().then(response =>{
          for(var i=0; i<response.length; i++){
-           this.newUsersInfor = new Repository(response[i].name, response[i].url, response[i].html_url, response[i].description);
+           this.newUsersInfor = new Repository(response[i].name, response[i].url, response[i].html_url, response[i].description, response[i].created_at)
            this.repositories.push(this.newUsersInfor)
          }
          resolve("")

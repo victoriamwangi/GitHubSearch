@@ -19,3 +19,7 @@ a {
     border: rgb(62, 230, 230) solid 1px;
     color: rgb(245, 17, 17);
 }
+
+.description {
+    font-size: 1.1vw;
+}

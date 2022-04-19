@@ -5,6 +5,7 @@ export class Repository {
   public url: string,
   public name: string,
   public description: string,
+  public created_at: string
 
   ){
 

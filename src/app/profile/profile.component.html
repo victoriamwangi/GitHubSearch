@@ -11,6 +11,7 @@
                 <p>GitHub Profile:</p>
                 <a href="{{ user.url }}"> {{ user.login }}</a>
             </div>
+            <p>Joined on: {{ user.created_at | date: "mediumDate" }}</p>
             <div class="d-flex">
                 <p class="follow">Following: {{ user.following }}</p>
 
