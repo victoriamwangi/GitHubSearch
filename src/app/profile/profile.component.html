@@ -1,29 +1,24 @@
 <div class="row">
-    <div class="col-lg-4">
-        <div class="container">
-            <img src=" {{ user.avatar_url }}" alt="" />
-            <p>{{ user.login }}</p>
+    <div class="col-lg-5">
+        <div class="container img-container">
+            <img src=" {{ user.avatar_url }}" alt="msm" />
+        </div>
+        <div class="profile shadow">
+            <div class="infor name">
+                <p>{{ user.name }}</p>
+            </div>
+            <div class="d-flex">
+                <p>GitHub Profile:</p>
+                <a href="{{ user.url }}"> {{ user.login }}</a>
+            </div>
+            <div class="d-flex">
+                <p class="follow">Following: {{ user.following }}</p>
+
+                <p class="follow">Followers: {{ user.followers }}</p>
+            </div>
         </div>
     </div>
-    <div class="col-lg-4 col-infor">
-        <div class="infor shadow">
-            <p class="title">Names</p>
-            <p>{{ user.name }}</p>
-        </div>
-        <div class="infor shadow">
-            <p class="title">Profile Url</p>
-            <a href="">{{ user.url }}</a>
-        </div>
-        <div class="infor shadow">
-            <p class="title">Following</p>
-            <p>{{ user.following }}</p>
-        </div>
-        <div class="infor shadow">
-            <p class="title">Followers</p>
-            <p>{{ user.followers }}</p>
-        </div>
-    </div>
-    <div class="col-lg-4">
+    <div class="col-lg-7">
         <app-repo-data></app-repo-data>
     </div>
 </div>

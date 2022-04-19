@@ -10,6 +10,7 @@ import { UserService } from '../userhttp/user.service';
 })
 export class ProfileComponent implements OnInit {
 user!: User;
+userhttp!: UserService;
 
   constructor(private userService: UserService) { }
 

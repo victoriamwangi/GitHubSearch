@@ -1,19 +1,40 @@
-.container {
+.img-container {
     margin-top: 3vw;
-    height: 30vw;
-    width: 90%;
+    height: 20vw;
+    width: 60%;
     border: solid 1px;
+    border-radius: 20%;
 }
 
 .col-infor {
     margin-top: 3vw;
 }
 
+.profile {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8vw;
+    margin-left: 2vw;
+    padding-top: 2vw;
+}
+
+.name {
+    color: rgb(62, 230, 230) !important;
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+
+.follow {
+    padding-right: 1.3vw;
+}
+
+
+/*
 .infor {
     height: 6vw;
     margin-bottom: 2vw;
     padding-left: 1.2vw;
-}
+} */
 
 .title {
     color: rgb(28, 28, 236);

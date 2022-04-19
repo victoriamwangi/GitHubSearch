@@ -15,10 +15,6 @@ repo!: Repository;
 repositories:any = [];
 newUsersInfor:any = [];
 
-
-
-
-
   constructor(private http :HttpClient) {
     this.user = new User ("","","");
     this.repo = new Repository("", "", "","");
@@ -28,7 +24,7 @@ newUsersInfor:any = [];
      interface ApiResponse{
        login: string;
        avatar_url: string;
-       url: string;
+       html_url: string;
        name: string;
        following: number;
        followers: number;
@@ -39,7 +35,7 @@ newUsersInfor:any = [];
        this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response =>{
          this.user.avatar_url = response!.avatar_url;
          this.user.login= response!.login;
-         this.user.url = response!.url;
+         this.user.url = response!.html_url;
          this.user.name = response!.name;
          this.user.followers = response!.followers;
          this.user.following = response!.following;
