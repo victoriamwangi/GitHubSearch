@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Repository } from '../repository';
+import { User } from '../user';
+import { UserService } from '../user-search.service';
+
 
 @Component({
   selector: 'app-repository',
@@ -7,11 +9,17 @@ import { Repository } from '../repository';
   styleUrls: ['./repository.component.css']
 })
 export class RepositoryComponent implements OnInit {
-repos!: Repository[];
+user!: User;
+repositoriesInfor: any = [];
+userhttp! : UserService;
+  constructor(userhttp: UserService) {
+this.userhttp = userhttp;
+  }
 
-  constructor() { }
+  ngOnInit(): void  {
+    this.user = this.userhttp.user;
+    this.repositoriesInfor = this.userhttp.repositories;
 
-  ngOnInit(): void {
   }
 
 }

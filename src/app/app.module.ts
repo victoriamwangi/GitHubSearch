@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { RepoDataComponent } from './repo-data/repo-data.component';
+import { FormsModule } from '@angular/forms';
+import { UserSearchComponent } from './user-search/user-search.component';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { RepoDataComponent } from './repo-data/repo-data.component';
     ProfileComponent,
     SearchFormComponent,
     RepositoryComponent,
-    RepoDataComponent
+    RepoDataComponent,
+    UserSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

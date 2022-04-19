@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { User } from '../user';
+import { User } from './user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Repository } from '../repository';
+import { Repository } from './repository';
 
 
 
@@ -20,7 +20,7 @@ newUsersInfor:any = [];
     this.repo = new Repository("", "", "","", "");
    }
 
-   userRequest(){
+   userRequest(userName: string){
      interface ApiResponse{
        login: string;
        avatar_url: string;
@@ -34,7 +34,7 @@ newUsersInfor:any = [];
 
      }
      let promise = new Promise((resolve, reject)=>{
-       this.http.get<ApiResponse>(environment.vicUrl).toPromise().then(response =>{
+       this.http.get<ApiResponse>(environment.apiUrl + userName).toPromise().then(response =>{
          this.user.avatar_url = response!.avatar_url;
          this.user.login= response!.login;
          this.user.url = response!.html_url;
@@ -53,7 +53,7 @@ newUsersInfor:any = [];
 
          reject(error)
        })
-       this.http.get<any>(environment.reposUrl).toPromise().then(response =>{
+       this.http.get<any>(environment.apiUrl+userName +"/repos").toPromise().then(response =>{
          for(var i=0; i<response.length; i++){
            this.newUsersInfor = new Repository( response[i].name, response[i].url, response[i].html_url, response[i].description, response[i].created_at)
            this.repositories.push(this.newUsersInfor)

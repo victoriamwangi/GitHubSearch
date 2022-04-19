@@ -1,3 +1,6 @@
-<form action="">
-    <i class="fa fa-search" aria-hidden="true"></i>
+<form (ngSubmit)="searchUser()" #searchForm="ngForm" name=" searchFrom" class="d-flex">
+    <input class="form-control me-2" type="text" id="userName" [(ngModel)]="userName" name="userName" placeholder="Github Username" aria-label="Search" />
+    <button routerLink="./user-search" class="btn btn-outline-success" type="submit">
+    Search
+  </button>
 </form>
