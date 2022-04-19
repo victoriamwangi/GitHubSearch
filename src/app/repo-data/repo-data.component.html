@@ -1,11 +1,14 @@
 <div class="container" *ngFor="let repInfor of repositoriesInfor">
-    <div class="repo">
-        <ul>
-            <li>{{ repInfor.description }}</li>
-        </ul>
-        <a href="" target="_blank">{{ repInfor.name }}</a>
-        <p>{{ repInfor.name }}</p>
+    <div class="repo shadow">
+        <a class="name" href="{{ repInfor.html_url }}" target="_blank">{{
+      repInfor.html_url
+    }}</a>
+
         <p>{{ repInfor.description }}</p>
-    </div>
+        <p>
+            <a name="" id="" class="btn btn-primary" href="{{ repInfor.name }}" role="button">View Repository</a
+      >
+    </p>
+  </div>
 </div>
 <div></div>
