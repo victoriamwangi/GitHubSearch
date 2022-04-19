@@ -1,4 +1,12 @@
 <div class="container" *ngFor="let repInfor of repositoriesInfor">
-    <a href="{{ repInfor.html_url }}" target="_blank">{{ repInfor.name }}</a>
+    <div class="repo">
+        <ul>
+            <li>{{ repInfor.description }}</li>
+        </ul>
+        <a href="" target="_blank">{{ repInfor.name }}</a>
+        <p>{{ repInfor.name }}</p>
+        <p>{{ repInfor.description }}</p>
+        {{ user.name }}
+    </div>
 </div>
 <div></div>
