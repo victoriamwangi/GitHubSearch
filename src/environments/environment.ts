@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://api.github.com/users/victoriamwangi"
+  apiUrl: "https://api.github.com/users/victoriamwangi",
+  reposUrl: "https://api.github.com/users/victoriamwangi/repos"
 };
 
 /*

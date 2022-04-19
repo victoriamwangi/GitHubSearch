@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Repository } from '../repository';
 
 
 
@@ -10,9 +11,17 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
 user: User;
+repo!: Repository;
+repositories:any = [];
+newUsersInfor:any = [];
+
+
+
+
 
   constructor(private http :HttpClient) {
     this.user = new User ("","","");
+    this.repo = new Repository("", "", "","");
    }
 
    userRequest(){
@@ -23,6 +32,8 @@ user: User;
        name: string;
        following: number;
        followers: number;
+       repos_url: Repository[];
+
      }
      let promise = new Promise((resolve, reject)=>{
        this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response =>{
@@ -32,8 +43,8 @@ user: User;
          this.user.name = response!.name;
          this.user.followers = response!.followers;
          this.user.following = response!.following;
-         resolve("")
 
+         resolve("")
        },
        error=>{
          this.user.avatar_url = "Avatar";
@@ -42,6 +53,17 @@ user: User;
 
          reject(error)
        })
+       this.http.get<any>(environment.reposUrl).toPromise().then(response =>{
+         for(var i=0; i<response.length; i++){
+           this.newUsersInfor = new Repository(response[i].name, response[i].url, response[i].html_url, response[i].description);
+           this.repositories.push(this.newUsersInfor)
+         }
+         resolve("")
+       },
+       error=>{
+         reject(error)
+       }
+       )
 
      })
      return promise
