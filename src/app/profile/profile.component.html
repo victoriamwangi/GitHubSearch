@@ -5,21 +5,25 @@
         </div>
         <div class="profile shadow">
             <div class="infor name">
-                <p>{{ user.name }}</p>
+                <h5>{{ user.name }}</h5>
             </div>
-            <div class="d-flex">
-                <p>GitHub Profile:</p>
-                <a href="{{ user.url }}"> {{ user.login }}</a>
-            </div>
+            <p>{{ user.bio }}</p>
+
             <p>Joined on: {{ user.created_at | date: "mediumDate" }}</p>
             <div class="d-flex">
-                <p class="follow">Following: {{ user.following }}</p>
+                <p class="follow">
+                    Following: <span>{{ user.following }}</span>
+                </p>
 
-                <p class="follow">Followers: {{ user.followers }}</p>
+                <p class="follow">
+                    Followers: <span> {{ user.followers }}</span>
+                </p>
             </div>
-        </div>
+            <a name="" id="" class="btn btn-primary" href="{{ user.url }}" role="button">Github Profile</a
+      >
     </div>
-    <div class="col-lg-7">
-        <app-repo-data></app-repo-data>
-    </div>
+  </div>
+  <div class="col-lg-7">
+    <app-repo-data></app-repo-data>
+  </div>
 </div>

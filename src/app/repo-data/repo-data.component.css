@@ -10,14 +10,15 @@ a {
 
 .name {
     color: rgb(62, 230, 230) !important;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     font-weight: bold;
 }
 
 .btn {
     background-color: transparent;
-    border: rgb(62, 230, 230) solid 1px;
-    color: rgb(245, 17, 17);
+    border: rgb(28, 28, 236) solid 1px;
+    color: rgb(28, 28, 236);
+    font-size: bold;
 }
 
 .description {
