@@ -1,20 +1,50 @@
-.search-btns {
-    width: 30vw;
-    margin: 0 auto;
+img {
+    margin-top: 3vw;
+    width: 20vw;
+    border-radius: 20%;
+}
+
+p {
+    font-size: 1.1vw;
+}
+
+.col-infor {
     margin-top: 3vw;
 }
 
-.btn {}
-
-.userSearch {
-    background-color: transparent;
-    border: rgb(62, 230, 230) solid 1px;
-    color: rgb(28, 28, 236);
-    margin-right: 2vw;
+.profile {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8vw;
+    margin-left: 2vw;
+    padding-top: 2vw;
 }
 
-.repoSearch {
-    background-color: transparent;
-    color: rgb(62, 230, 230);
-    border: rgb(28, 28, 236) solid 1px;
+.name {
+    color: rgb(62, 230, 230) !important;
+    font-weight: bold;
+    font-size: 1.6vw !important;
+}
+
+.follow {
+    padding-right: 1.3vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    color: rgb(28, 28, 236);
+    font-weight: bold;
+}
+
+.btn {
+    width: 15vw;
+    margin-bottom: 2vw;
+    background-color: rgb(28, 28, 236);
+}
+
+.d-flex span {
+    color: rgb(28, 28, 236);
 }

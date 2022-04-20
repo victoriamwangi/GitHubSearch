@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-import { UserService } from '../user-search.service';
+import { UserService } from '../userhttp/user.service';
+import { SafePipePipe } from '../pipe/safe-pipe.pipe';
 
 
 @Component({
@@ -10,9 +12,18 @@ import { UserService } from '../user-search.service';
 })
 export class UserSearchComponent implements OnInit {
 user!: User;
-  constructor() { }
+userhttp!: UserService;
+  public showInput =true;
+  public showInfor = false;
+
+  showUserInput(hideInput: any){
+  this.showInput = hideInput;
+  this.showInfor = false;
+}
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.userRequest();
+    this.user = this.userService.user;
   }
-
 }

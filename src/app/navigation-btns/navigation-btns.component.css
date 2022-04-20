@@ -1,0 +1,20 @@
+.search-btns {
+    width: 30vw;
+    margin: 0 auto;
+    margin-top: 3vw;
+}
+
+.btn {}
+
+.userSearch {
+    background-color: transparent;
+    border: rgb(62, 230, 230) solid 1px;
+    color: rgb(28, 28, 236);
+    margin-right: 2vw;
+}
+
+.repoSearch {
+    background-color: transparent;
+    color: rgb(62, 230, 230);
+    border: rgb(28, 28, 236) solid 1px;
+}

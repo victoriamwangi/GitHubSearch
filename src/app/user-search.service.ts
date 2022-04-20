@@ -14,13 +14,18 @@ user: User;
 repo!: Repository;
 repositories:any = [];
 newUsersInfor:any = [];
+showInput!: boolean;
+showInfor!: boolean;
 
   constructor(private http :HttpClient) {
     this.user = new User ("","","", "", "");
     this.repo = new Repository("", "", "","", "");
    }
 
+
+
    userRequest(userName: string){
+     this.repositories.length = 0;
      interface ApiResponse{
        login: string;
        avatar_url: string;

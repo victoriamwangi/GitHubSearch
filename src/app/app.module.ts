@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { SafePipePipe } from './pipe/safe-pipe.pipe';
 import { HighlightDirective } from './directive/highlight.directive';
+import { NavigationBtnsComponent } from './navigation-btns/navigation-btns.component';
 
 
 
@@ -27,6 +28,7 @@ import { HighlightDirective } from './directive/highlight.directive';
     UserSearchComponent,
     SafePipePipe,
     HighlightDirective,
+    NavigationBtnsComponent,
 
   ],
   imports: [
