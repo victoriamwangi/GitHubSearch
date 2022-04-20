@@ -3,6 +3,21 @@
     justify-content: center;
 }
 
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2vw;
+}
+
 .container-fluid {
-    margin-left: 25vw;
+    margin-left: 28vw;
+}
+
+.btnHome {
+    background-color: white;
+    width: 10vw;
+    height: 2.6vw;
+    border: rgb(28, 28, 236) 1px solid;
+    margin-left: 7vw;
+    font-weight: bold;
+    color: rgb(28, 28, 236);
 }
