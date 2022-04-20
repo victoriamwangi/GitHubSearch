@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+.name:hover {
+    color: pink;
+}
+
 .name {
     color: rgb(62, 230, 230) !important;
     font-size: 1.5vw;
