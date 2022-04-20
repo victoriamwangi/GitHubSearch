@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
 import { UserService } from '../userhttp/user.service';
+import { SafePipePipe } from '../pipe/safe-pipe.pipe';
 
 @Component({
   selector: 'app-profile',

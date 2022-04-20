@@ -1,8 +1,6 @@
-.img-container {
+img {
     margin-top: 3vw;
-    height: 20vw;
-    width: 60%;
-    border: solid 1px;
+    width: 20vw;
     border-radius: 20%;
 }
 

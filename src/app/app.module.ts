@@ -11,6 +11,8 @@ import { RepositoryComponent } from './repository/repository.component';
 import { RepoDataComponent } from './repo-data/repo-data.component';
 import { FormsModule } from '@angular/forms';
 import { UserSearchComponent } from './user-search/user-search.component';
+import { SafePipePipe } from './pipe/safe-pipe.pipe';
+
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { UserSearchComponent } from './user-search/user-search.component';
     SearchFormComponent,
     RepositoryComponent,
     RepoDataComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    SafePipePipe,
+
   ],
   imports: [
     BrowserModule,
