@@ -1,5 +1,5 @@
 <div class="container" *ngFor="let repInfor of repositoriesInfor">
-    <div class="repo rounded shadow">
+    <div appHighlight class="repo rounded shadow">
         <a class="name" href="{{ repInfor.html_url }}" target="_blank">{{
       repInfor.html_url
     }}</a>

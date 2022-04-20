@@ -12,6 +12,7 @@ import { RepoDataComponent } from './repo-data/repo-data.component';
 import { FormsModule } from '@angular/forms';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { SafePipePipe } from './pipe/safe-pipe.pipe';
+import { HighlightDirective } from './directive/highlight.directive';
 
 
 
@@ -25,6 +26,7 @@ import { SafePipePipe } from './pipe/safe-pipe.pipe';
     RepoDataComponent,
     UserSearchComponent,
     SafePipePipe,
+    HighlightDirective,
 
   ],
   imports: [
