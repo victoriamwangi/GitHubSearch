@@ -12,12 +12,12 @@
 
 
 ## Description
-This project allows one to post their favourite quotes as well as delete the quotes. The website has one page that show cases the quotes posted and a form to post others. The user is able to upvote and downvote a quote as well as view quote details such as the one who posted it and the time that has passed since it was posted.
+This project showcases my github information such as user name, repository and their respective description. It allows one to search a github user by typing in their usernames. The search results show the user's repository, their descriptions, date the repositories were created and a link to the repositories on github.
 
 ## Installation
 On the command line type:
 git clone https://github.com/victoriamwangi/GitHubSearch.git
-cd And-I-Quote
+cd GitHubSearch
 npm install
 to open project on vs code run: code .
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
