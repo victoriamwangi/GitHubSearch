@@ -41,7 +41,7 @@ showInfor!: boolean;
 
      }
      let promise = new Promise((resolve, reject)=>{
-       this.http.get<ApiResponse>(environment.apiUrl + userName).toPromise().then(response =>{
+       this.http.get<ApiResponse>(" https://api.github.com/users/" + userName).toPromise().then(response =>{
          this.user.avatar_url = response!.avatar_url;
          this.user.login= response!.login;
          this.user.url = response!.html_url;
@@ -63,7 +63,7 @@ showInfor!: boolean;
        })
 
 
-       this.http.get<any>(environment.apiUrl +userName +"/repos").toPromise().then(response =>{
+       this.http.get<any>(" https://api.github.com/users/" +userName +"/repos").toPromise().then(response =>{
          for(var i=0; i<response.length; i++){
 
            this.newUsersInfor = new Repository( response[i].name, response[i].url, response[i].html_url, response[i].description, response[i].created_at)
