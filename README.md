@@ -13,6 +13,7 @@
 
 ## Description
 This project showcases my github information such as user name, repository and their respective description as fetched using the github API. It allows one to search a github user by typing in their usernames. The search results show the user's repository, their descriptions, date the repositories were created and a link to the repositories on github.
+SITE URL: [https://victoriamwangi.github.io/GitHubSearch/]
 
 ## Installation
 On the command line type:
