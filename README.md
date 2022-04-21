@@ -1,14 +1,31 @@
 # GitHubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## Table of Content
 
-## Development server
++ [Description](#description)
++ [Installation](#installation)
++ [Development server](#dependecies)
++ [Requirements](#requirements)
++ [Technology Used](#technology-used)
++ [Licence](#licence)
++ [Authors Info](#authors-info)
 
+
+## Description
+This project allows one to post their favourite quotes as well as delete the quotes. The website has one page that show cases the quotes posted and a form to post others. The user is able to upvote and downvote a quote as well as view quote details such as the one who posted it and the time that has passed since it was posted.
+
+## Installation
+On the command line type:
+git clone https://github.com/victoriamwangi/GitHubSearch.git
+cd And-I-Quote
+npm install
+to open project on vs code run: code .
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Either a computer,phone,tablet or an Ipad to interact with the site and access to the Internet.
+* For installation: npm, angular 
 
 ## Build
 
@@ -22,6 +39,38 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technology Used
+* HTML - which was used to build the general structure of the page.
+* CSS - which was used to style the page.
+* Bootstrap - which was used to make the page responsive and visually appealing
+* JavaScript - which was used to form information
+* Angular- js framework used to do fast development 
+
+
+## Licence
+
+MIT License
+
+Copyright (c) [2022] [VictoriaMwangi]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Authors Info
+LinkedIn - [https://www.linkedin.com/in/victoria-mwangi-5bb054203/]
