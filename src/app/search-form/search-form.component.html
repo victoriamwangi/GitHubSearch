@@ -1,4 +1,7 @@
-<form (ngSubmit)="searchUser()" #searchForm="ngForm" name=" searchFrom" class="d-flex">
-    <input class="form-control me-2" type="text" id="userName" [(ngModel)]="userName" name="userName" placeholder="Github Username" aria-label="Search" />
-    <button class="btn btn-outline-success" type="submit">Search</button>
-</form>
+<div *ngIf="showInput">
+    <form (ngSubmit)="searchUser()" #searchForm="ngForm" name=" searchFrom" class="d-flex">
+        <input class="form-control me-2" type="text" id="userName" [(ngModel)]="userName" name="userName" placeholder="Github Username" aria-label="Search" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
+<app-user-search *ngIf="showInput" (toggleBack)="showUserInput($event)"></app-user-search>

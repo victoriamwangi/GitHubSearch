@@ -12,7 +12,7 @@ import { Repository } from './repository';
 export class UserService {
 user: User;
 repo!: Repository;
-repositories:any = [];
+repositoriesInfor:any = [];
 newUsersInfor:any = [];
 showInput!: boolean;
 showInfor!: boolean;
@@ -25,7 +25,9 @@ showInfor!: boolean;
 
 
    userRequest(userName: string){
-     this.repositories.length = 0;
+    //  console.log(userName)
+
+     this.repositoriesInfor.length = 0;
      interface ApiResponse{
        login: string;
        avatar_url: string;
@@ -49,6 +51,7 @@ showInfor!: boolean;
          this.user.created_at = response!.created_at;
          this.user.bio = response!.bio;
 
+
          resolve("")
        },
        error=>{
@@ -58,12 +61,18 @@ showInfor!: boolean;
 
          reject(error)
        })
-       this.http.get<any>(environment.apiUrl+userName +"/repos").toPromise().then(response =>{
+
+
+       this.http.get<any>(environment.apiUrl +userName +"/repos").toPromise().then(response =>{
          for(var i=0; i<response.length; i++){
+
            this.newUsersInfor = new Repository( response[i].name, response[i].url, response[i].html_url, response[i].description, response[i].created_at)
-           this.repositories.push(this.newUsersInfor)
+           this.repositoriesInfor.push(this.newUsersInfor);
+
+
          }
          resolve("")
+
        },
        error=>{
          reject(error)

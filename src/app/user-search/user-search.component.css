@@ -48,3 +48,30 @@ a {
 .d-flex span {
     color: rgb(28, 28, 236);
 }
+
+.repo {
+    height: auto;
+    padding: 2vw;
+    margin-top: 2vw;
+}
+
+.name:hover {
+    color: pink;
+}
+
+.name {
+    color: rgb(62, 230, 230) !important;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: transparent;
+    border: rgb(28, 28, 236) solid 1px;
+    color: rgb(28, 28, 236);
+    font-size: bold;
+}
+
+.description {
+    font-size: 1.1vw;
+}

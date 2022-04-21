@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-import { UserService } from '../userhttp/user.service';
+import { UserService } from '../user-search.service';
 import { SafePipePipe } from '../pipe/safe-pipe.pipe';
 
 
@@ -12,18 +12,29 @@ import { SafePipePipe } from '../pipe/safe-pipe.pipe';
 })
 export class UserSearchComponent implements OnInit {
 user!: User;
-userhttp!: UserService;
-  public showInput =true;
-  public showInfor = false;
+repositoryDetails: any = [];
+userSearchService!: UserService;
+hideInput!: boolean;
+//   public showInput =true;
+//   public showInfor = false;
 
-  showUserInput(hideInput: any){
-  this.showInput = hideInput;
-  this.showInfor = false;
-}
-  constructor(private userService: UserService) { }
+//   showUserInput(hideInput: any){
+//   this.showInput = hideInput;
+//   this.showInfor = false;
+// }
+
+  constructor( userSearchService: UserService) {
+    this.userSearchService = this.userSearchService;
+  }
+  @Output() toggleBack = new EventEmitter();
+  goBack(){
+    this.hideInput = true;
+    this.toggleBack.emit(this.hideInput);
+  }
 
   ngOnInit(): void {
-    this.userService.userRequest();
-    this.user = this.userService.user;
+    this.userSearchService.user;
+    this.user = this.userSearchService.user;
+    this.repositoryDetails = this.userSearchService.repositoriesInfor;
   }
 }

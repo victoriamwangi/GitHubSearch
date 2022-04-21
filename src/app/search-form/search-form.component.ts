@@ -10,12 +10,12 @@ import { UserService } from '../user-search.service';
 export class SearchFormComponent implements OnInit {
   user!: User;
   userName!: string;
-  userhttp: UserService;
+  userSearchService: UserService;
   public showInput =true;
   public showInfor = false;
 
   searchUser(){
-    this.userhttp.userRequest(this.userName);
+    this.userSearchService.userRequest(this.userName);
     this.showInput = false;
     this.showInfor = true;
   }
@@ -23,11 +23,13 @@ showUserInput(hideInput: any){
   this.showInput = hideInput;
   this.showInfor = false;
 }
-  constructor(userhttp: UserService) {
-    this.userhttp = userhttp;
-  }
+   constructor( userSearchService: UserService) {
+     this.userSearchService = userSearchService;
+    }
 
-  ngOnInit(): void {
+
+    ngOnInit() {
+
   }
 
 }

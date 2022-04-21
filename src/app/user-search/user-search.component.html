@@ -1,5 +1,4 @@
-<app-search-form></app-search-form>
-<div *ngIf="showInfor" (toogleBack)="showUserInput($event)">
+<div>
     <div class="row">
         <div class="col-lg-5 d-row">
             <div class="container profile img-container">
@@ -25,8 +24,20 @@
         >
       </div>
     </div>
-    <div class="col-lg-7">
-      <app-repo-data></app-repo-data>
+    <div class="col-lg-7"></div>
+  </div>
+  <div class="container" *ngFor="let repInfor of repositoryDetails">
+    <div appHighlight class="repo rounded shadow">
+      <a class="name" href="{{ repInfor.html_url }}" target="_blank">{{
+        repInfor.html_url
+      }}</a>
+                <p class="description">{{ repInfor.description }}</p>
+                <p class="description">{{ repInfor.created_at | date: "mediumDate" }}</p>
+
+                <p>
+                    <a name="" id="" class="btn btn-primary" href="{{ repInfor.name }}" role="button">View Repository</a
+        >
+      </p>
     </div>
   </div>
 </div>
